@@ -3,12 +3,16 @@ import random as rng
 from fastapi.responses import JSONResponse
 from static import all_file
 
-url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+# url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+url = 'http://localhost:3030/vv/'
+
 
 def get_random_pic(amount: int) -> list:
     """Return all mygo pictures"""
     try:
         files = all_file.file_list
+
+        # print(f"url: {url}")
 
         rng_pics = rng.sample(files, amount)
 

@@ -12,7 +12,9 @@ cc = OpenCC('s2t')
 with json_path.open('r', encoding='utf-8') as f:
     data = json.load(f)
 
-url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+# url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+url = 'http://localhost:3030/vv/'
+
 all_pics = all_file.file_list
 
 fuzzy_replacements = {

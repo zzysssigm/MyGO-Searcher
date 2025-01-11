@@ -6,7 +6,8 @@ import requests
 from fastapi.responses import JSONResponse
 from static import all_file
 
-url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+# url = 'https://drive.miyago9267.com/d/file/img/mygo/'
+url = 'http://localhost:3030/vv/'
 
 def get_pic_list() -> list:
     """Return all mygo pictures"""
