@@ -1,7 +1,7 @@
 import { jsonData } from '../../utils/dataLoader'
 import { defineEventHandler } from 'h3';
 
-const baseURL = 'https://drive.miyago9267.com/d/file/img/mygo/';
+const baseURL = 'http://localhost:3030/vv/';
 const data_mapping = Array.isArray(jsonData) ? jsonData : [];
 
 export const getRandomPic = (amount: number) => {
@@ -14,6 +14,7 @@ export const getRandomPic = (amount: number) => {
 			url: baseURL + item.file_name,
 			alt: item.name,
 		}));
+		console.log(picFiles)
 		return { statusCode: 200, urls: picFiles };
 	} catch (error) {
 		console.error(error);
